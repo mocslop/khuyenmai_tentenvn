@@ -1,5 +1,7 @@
 <?php
-require get_template_directory().'/inc/function-admin.php';
+include get_template_directory().'/includes/admin/function-admin.php';
+include get_template_directory().'/includes/admin/aio-list-categories/aio-list-category.php';
+include get_template_directory().'/includes/admin/add_meta_box.php';
      
       function load_admin_style() {
         wp_register_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, '1.0.0' );
@@ -42,6 +44,8 @@ function excerpt($limit) {
 	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
 	return $excerpt;
 }
+
+
 	// ADD FEATURED IMAGE SUPPORT
 function featured_images_setup(){
 	add_theme_support('post-thumbnails');
@@ -50,12 +54,14 @@ function featured_images_setup(){
     add_image_size( 'large', 1200, 800, true ); //large
 }
 add_action('after_setup_theme','featured_images_setup');
+
 	// ADD POST FORMAT SUPPORT
 add_theme_support('post-formats',array('aside','gallery','link'));
+
 	// ADD OUR WIDGETS LOCATION
 function our_widget_inits(){
 	register_sidebar(array(
-		'name' => 'Sidebar',
+		'name' => 'sidebar',
 		'id' => 'sidebar1',
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget_area">',
 		'after_widget' => "</div>",
@@ -367,6 +373,7 @@ function no_woo() {
         remove_menu_page( 'woocommerce' );
     }
 }
+
 // HIDE CHLID MENU FROM ADMIN
 //add_action( 'admin_init', 'wodebug_admin_menu' );
 function wodebug_admin_menu() {

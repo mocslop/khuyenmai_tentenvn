@@ -12,7 +12,7 @@
      text-decoration: none !important;
 }
  a:hover{
-     color: #b52622;
+     color: #3faf40;
 }
  :hover,:focus{
      outline: none !important;
@@ -64,7 +64,7 @@
 }
  .icon_mobile_click i.fa{
      font-size: 30px;
-     color: #b52622;
+     color: #3faf40;
 }
  .top_header{
      position: relative;
@@ -78,7 +78,7 @@
      bottom: 0;
      width:260px;
      left:-260px;
-     background-color: #b52622;
+     background-color: #3faf40;
      -webkit-transition: -webkit-transform .3s ease;
      -moz-transition: -moz-transform .3s ease;
      -o-transition: -o-transform .3s ease;
@@ -112,7 +112,7 @@
      cursor: pointer;
      position: absolute;
      right: 0px;
-     background: #b52622;
+     background: #3faf40;
      display: none;
      cursor: pointer;
      top: 0px;
@@ -266,7 +266,7 @@
  .content_popup h2{
      font-size: 22px;
      text-transform: uppercase;
-     background: #b52622;
+     background: #3faf40;
      padding: 12px 0px 10px 0px;
      color: #fff;
      border-radius: 5px 5px 0px 0px;
@@ -375,17 +375,36 @@
 }
  .nav_primary ul>li>a{
      display: inline-block;
-     padding: 15px 18px;
+     padding: 15px 60px;
      color: #fff;
      font-weight: 700;
      transition: all 0.3s;
      font-size: 13px;
      text-transform: uppercase;
+     position: relative;
 }
+ .nav_primary ul>li:nth-child(2)>a::before{
+     content:url(../images/www.png);
+     position: absolute;
+     left: 25px;
+     top:10px;
+ }
+  .nav_primary ul>li:nth-child(3)>a::before{
+     content:url(../images/icon_hosting.png);
+     position: absolute;
+     left: 25px;
+     top: 13px;
+ }
+  .nav_primary ul>li:nth-child(4)>a::before{
+     content:url(../images/icon_airplane.png);
+     position: absolute;
+     left: 25px;
+     top: 13px;
+ }
  .nav_primary ul>li>ul.sub-menu{
      position: absolute;
      width: 210px;
-     background: #b52622;
+     background: #3faf40;
      border-top: 1px solid #fff;
      top: 75px;
      z-index: 999;
@@ -435,74 +454,25 @@
      overflow: hidden;
 }
  .list_post_item .thumbnail{
-     max-width: 300px;
+     max-width: 250px;
      width: 100%;
      margin: 0px 30px 0px 0px;
      float: left;
-     height: 180px;
+     height: 140px;
      background-repeat: no-repeat !important;
      background-size: cover !important;
      background-position: center center !important;
      overflow: hidden;
 }
  .list_post_item .post_meta a{
-     color: #288395;
-}
- .cat_post_area_idx .list_post_item .thumbnail{
-     max-width: 190px;
-     height: 155px;
-     margin: 0px 20px 0px 0px;
-}
- .cat_post_area_idx .common_diseases>h2 a{
-     display: table;
-}
- .cat_post_area_idx .common_diseases>h2 span{
-     background: #b52622;
-     display: table;
      color: #fff;
-     font-size: 17px;
-     padding: 13px 20px 13px 40px;
-     text-transform: uppercase;
+     padding: 4px 17px;
+     background: #d62825;
      border-radius: 3px;
 }
- .cat_post_area_idx .common_diseases>h2 span i.fa{
-     position: absolute;
-     left: 12px;
-     top: 15px;
-}
- .cat_post_area_idx .common_diseases>h2 {
-     position: relative;
-     margin:0px 0px 20px 0px;
-}
- .cat_post_area_idx .common_diseases>h2::before{
-     content: "";
-     width: 100%;
-     height: 1px;
-     background: #b52622;
-     position: absolute;
-     bottom: 0px;
-     left: 0px;
-}
- .cat_post_area_idx .list_post_item .post_meta{
-     display: none;
-}
- .cat_post_area_idx .list_post_item h2.post_title a{
-     font-size: 14px;
-     line-height: 24px;
-     display: inline-block;
-     text-transform: uppercase;
-}
- .hot_big_post .thumbnail a , .list_hot_post_others .thumbnail a , .list_post_item .thumbnail a{
-     display: block;
-     height: 100%;
-}
- .list_hot_post_others .thumbnail{
-     height: 180px;
-     background-repeat: no-repeat !important;
-     background-size: cover !important;
-     background-position: center center !important;
-     overflow: hidden;
-}
+
+
+
  .nav_primary ul li a:hover{
      color: #fff;
      background: rgba(255, 255, 255, 0.3);
@@ -526,7 +496,7 @@
      width: 30px;
      height: 30px;
      border-radius: 50%;
-     background: #b52622;
+     background: #3faf40;
      color: #fff;
      text-align: center;
      line-height: 30px;
@@ -543,20 +513,18 @@
      max-width: 250px;
      float:left;
      transition: all 0.3s;
-     margin: 15px 0px 10px 0px;
+     margin: 23px 0px 23px 0px;
 }
  .logo_site img{
      max-width: 100%;
      height:auto;
 }
  .nav_primary{
-     float: left;
-     margin:0px;
+     float: none;
+     margin: 0px auto;
+     display: table;
 }
- .search_header{
-     float: right;
-     margin: 10px 0px 0px 0px;
-}
+
  .fixedheader {
      position: fixed;
      top: 0;
@@ -573,50 +541,10 @@
  .fixedheader .search_header{
      margin:12px 0px 0px 0px;
 }
- .address_header{
-     float:right;
-     margin: 23px 0px 0px 0px;
-}
- .address_header p a{
-     color: #b52622;
-     font-weight: 700;
-     margin: 0px 0px 0px 4px;
-}
- .address_header p{
-     float: right;
-     margin: 0px 0px 0px 30px;
-     line-height: 20px;
-     text-align: right;
-}
- .address_header p em{
-     font-style: normal;
-     float:left;
-     max-width: 470px;
-     margin: 0px 0px 0px 4px;
- }
- .address_header i.fa{
-     float:left;
-     width: 25px;
-     height: 25px;
-     border-radius: 50%;
-     border: 1px solid #b52622;
-     text-align: center;
-     line-height: 23px;
-     font-size: 15px;
-     position: relative;
-     margin: -4px 7px 0px 0px;
-     top: 1px;
-     color: #b52622;
-}
-.address_header p strong{
-     float:left;
-}
-.address_header .textwidget{
-     display: table;
-     width: 100%;
-}
+
+ 
  .middle_header{
-     background: #b52622;
+     background: #3faf40;
      padding: 0px 0px;
 }
  .header{
@@ -625,24 +553,9 @@
  .admin-bar .header{
      margin:0px 0px 0px 0px;
 }
- .search{
-     position: relative;
-     min-width: 190px;
-}
- .search button{
-     position: absolute;
-     top: 0px;
-     right: 0px;
-     background: none;
-     border: none;
-     padding: 5px 10px;
-}
- .search input[type="text"]{
-     width: 100%;
-     padding: 5px 25px 5px 10px;
-     border-radius: 5px;
-     border: none;
-}
+
+
+
 .banner {
      position: relative;
 }
@@ -806,7 +719,7 @@ position: relative;
 }
  
  .pw:hover h2 a , .widget_area a:hover{
-     color: #b52622 !important;
+     color: #3faf40 !important;
 }
  h2.post_title a{
      font-size: 17px;
@@ -819,7 +732,7 @@ position: relative;
      color:#f0a52b;
 }
  h2.post_title {
-     margin: 10px 0px 10px 0px;
+     margin: 0px 0px 10px 0px;
 }
  .excerpt p{
      font-size: 13px;
@@ -827,12 +740,21 @@ position: relative;
 }
  .list_post_item{
      clear: both;
-     /* margin: 0px 0px 30px 0px;
-     */
      display: table;
-     border-bottom: 1px dashed #c3c3c3;
-     padding: 25px 0px;
+     /* border-bottom: 1px dashed #c3c3c3; */
+     padding: 10px 0px 10px 10px;
      width: 100%;
+     background: #fff;
+     /* padding: 10px; */
+     margin: 0px 0px 30px 0px;
+}
+.category  .list_post_item{
+ padding: 25px 15px;
+}
+.list_post_item .post_wrapper_content{
+     display: table;
+     max-width: 300px;
+     float: left;
 }
  .list_post_item:last-child{
      border-bottom: none;
@@ -846,27 +768,60 @@ position: relative;
 .home .g_content {
      margin: 70px 0px 0px 0px;
 }
+.home h2.title_tg_top {
+         padding: 10px 20px 7px 20px;
+         color: #fff;
+         background: #3faf40;
+         position: relative;
+         display: inline-block;
+         /* padding: 10px; */
+         text-transform: uppercase;
+         font-weight: 700;
+         font-size: 15px;
+         margin: 0px 0px 20px 0px;
+}
  .readmore{
-     padding: 7px 25px;
-     background: #fff;
+     padding: 7px 0px;
+     background: #3faf40;
      border-radius: 3px;
-     color: #b52622;
-     font-weight: 700;
+     color: #fff;
+     /* font-weight: 700; */
      display: table;
      position: relative;
-     border: 1px solid #b52622;
+     border: 1px solid #3faf40;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     font-size: 16px;
+     line-height: 23px;
+     clear: both;
+     margin: 0px auto;
 }
- .readmore:focus{
-     color:#f0a52b;
+.readmore::before{
+     content:"\f105";
+     font:normal normal normal 14px/1 FontAwesome;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     border: 1px solid #fff;
+     display: inline-block;
+     text-align: center;
+     line-height: 17px;
+     font-size: 16px;
+     position: relative;
+     left: -10px;
 }
+
  .readmore i.fa{
      transition: all 0.3s linear;
      position: absolute;
      right: 14px;
      top:10px;
+     display: none;
 }
  .readmore:hover{
-     color: #b52622;
+     color: #fff;
+     background: #229423;
 }
  .readmore:hover i.fa{
      right: 6px;
@@ -874,10 +829,10 @@ position: relative;
 /* sidebar */
  .sidebar h3.widget-title{
      font-size: 17px;
-     color: #fff;
+     color: #595959;
      padding: 10px 0px;
      text-align: center;
-     background: #288395;
+     background: #f2f2f2;
      margin: 0px 0px 10px 0px;
      text-transform: uppercase;
      font-weight: 700;
@@ -893,10 +848,7 @@ position: relative;
  .sidebar table td , .sidebar table th{
      padding:5px 0px;
 }
- .sidebar iframe{
-     max-width: 100% !important;
-     height: auto;
-}
+
  .sidebar img{
      width: 100%;
      height:auto;
@@ -985,7 +937,7 @@ position: relative;
      max-width: 100%;
 }
  ul.list_categories{
-     border-bottom: 1px solid #b52622;
+     border-bottom: 1px solid #3faf40;
 }
  ul.list_categories li{
      display: inline-block;
@@ -994,18 +946,12 @@ position: relative;
      font-weight: 700;
 }
  ul.list_categories li.parent_cat{
-     padding: 10px 20px 7px 35px;
+     padding: 10px 20px 7px 20px;
      color: #fff;
-     background: #b52622;
+     background: #3faf40;
      position: relative;
 }
- ul.list_categories li.parent_cat::before{
-     position: absolute;
-     content: "\f06c";
-     font: normal normal normal 14px/1 FontAwesome;
-     left: 12px;
-     top: 13px;
-}
+
  ul.list_categories li.parent_cat a{
      color:#fff;
      font-size: 15px;
@@ -1041,7 +987,7 @@ position: relative;
  .single_post_info h2 a{
      font-size: 22px;
      line-height: 29px;
-     color: #b52622;
+     color: #3faf40;
      display: inline-block;
 }
  .single-post figure.aligncenter{
@@ -1083,7 +1029,7 @@ position: relative;
      text-transform: uppercase;
      font-weight: 700;
      padding: 0px 0px 0px 15px;
-     border-left: 4px solid #b52622;
+     border-left: 4px solid #3faf40;
 }
  .related_posts{
      margin:30px 0px 20px 0px;
@@ -1113,7 +1059,7 @@ position: relative;
      margin:0px 0px 30px 0px;
 }
  .related_posts ul li:hover a{
-     color: #b52622;
+     color: #3faf40;
 }
 /* end related posts */
 /* END SINGLE POST */
@@ -1138,7 +1084,7 @@ position: relative;
      content: "\f104" !important;
      font: normal normal normal 14px/1 FontAwesome !important;
      font-size: 28px !important;
-     background: #b52622;
+     background: #3faf40;
      width: 35px;
      height: 35px;
      display: inline-block;
@@ -1152,7 +1098,7 @@ position: relative;
      content: "\f105" !important;
      font: normal normal normal 14px/1 FontAwesome !important;
      font-size: 28px !important;
-     background: #b52622;
+     background: #3faf40;
      width: 35px;
      height: 35px;
      display: inline-block;
@@ -1213,23 +1159,11 @@ position: relative;
      text-align: center;
 }
  body.search-results .title_header strong{
-     color: #b52622;
+     color: #3faf40;
 }
 
 
 
-
-
-
-/* CSS OTHER*/
-iframe{
-     max-width: 100% !important;
-     width: 100% !important;
-}
-.popup_map iframe{
-     height: 400px;
-}
-/* END CSS OTHER*/
 
 /* CSS FOOTER */
  .footer{
@@ -1292,9 +1226,7 @@ iframe{
      bottom: -14px;
      left:0px;
  }
-  display: inline-block;
-}
- 
+
  .copyright{
      text-align: center;
      /* border-top: 1px solid #e6e6e6; */
@@ -1319,14 +1251,15 @@ iframe{
      color:#fff;
 }
 
-
-
 /* css rau*/
 
-
- 
-
+iframe{
+     max-width: 100% !important;
+     width: 100% !important;
+}
 /* end css rau*/
+
+
 /* pagination */
  .tg_pagination {
      display: table;
@@ -1340,7 +1273,7 @@ iframe{
      border-radius: 50%;
      line-height: 20px;
      color: #fff;
-     background: #b52622;
+     background: #3faf40;
      text-align: center;
      font-weight: 700;
 }
@@ -1358,19 +1291,64 @@ iframe{
      margin: 0px 3px;
 }
  .tg_pagination a:hover, .tg_pagination a:hover i{
-     color:#b52622;
+     color:#3faf40;
 }
 /* end pagination */
 
-
-
-
-/* list_post_other */
-.list_post_other ul>li:first-child{
-     padding:0px 0px 25px 0px;
+/* CSS KHUYENMAI_TENTEN */
+.search_address{
+     float:left;
+     margin: 30px 0px  0px 170px;
+     max-width: 600px;
+     width: 100%;
 }
+ .search_address .search{
+     position: relative;
+     width: 100%;
+}
+.search_address .search input{
+     width: 100%;
+     padding: 10px 70px 10px 15px;
+     border:1px solid #e6e6e6;
+     font-size: 15px;
+     color: #000;
+     border-radius: 3px;
+}
+.search button{
+     position: absolute;
+     top: 3px;
+     right: 3px;
+     background: #3faf40;
+     border: none;
+     padding: 7px 21px 8px 21px;
+     border-radius: 3px;
+}
+.search button i.fa{
+     color:#fff;
+     font-size: 20px;
+}
+.list_post_category{
+     display: table;
+     background: #f2f2f2;
+     padding: 20px 10px 20px 10px;
+     border-top: 3px solid #3faf40;
+     width: 100%;
+}
+ .list_post_item .post_meta ul>li:nth-child(1)~li{
+     display: none;
+ }
+ .read_more_area{
+     display: table;
+     width: 100%;
+     max-width: 230px;
+ }
+ .read_more_area .post_meta{
+     float:right;
+     display: table;
+     margin: 0px 0px 20px 0px;
+ }
 
-/* end list_post_other */
+/* END CSS KHUYENMAI_TENTEN */ 
 
  @media(min-width: 768px) and (max-width: 992px){
 
@@ -1388,9 +1366,7 @@ iframe{
     .address_header .textwidget{
       display: none;
     }
-    .list_post_highlight{
-     padding:40px 0px 10px 0px;
-    }
+ 
      .admin-bar .header{
          margin:45px 0px 0px 0px;
     }
@@ -1460,13 +1436,8 @@ iframe{
      .related_posts ul li .thumbnail{
          height: 120px;
     }
-     .item_focal_week h2{
-         max-width: 100%;
-         text-align: center;
-    }
-     #pl-16 .textwidget{
-         text-align: center;
-    }
+
+
      .popup .wpcf7{
          max-width: 100%;
          float:none;
@@ -1478,11 +1449,7 @@ iframe{
          font-size: 18px;
          padding: 13px 0px;
     }
-
-     .content_single_post h1, .content_single_post h2 , .content_single_post h3 , .content_single_post h4 , .content_single_post h1 a , .content_single_post h2 a , .content_single_post h3 a , .content_single_post h4 a {
-         font-size: 18px;
-         line-height: 26px;
-    }
+ 
      .single_post_info h2{
          margin:0px 0px 10px 0px;
     }
