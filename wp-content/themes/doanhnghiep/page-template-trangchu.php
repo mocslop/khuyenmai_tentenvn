@@ -7,6 +7,9 @@ get_header();
 <div class="page-wrapper">
 	<div id="content">
 		<div class="g_content">
+			<div class="tg_slide">
+				
+			</div>
 			<div class="content_left">
 				<div class="container">
 					<div class="row">

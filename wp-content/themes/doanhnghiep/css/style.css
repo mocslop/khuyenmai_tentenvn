@@ -375,7 +375,7 @@
 }
  .nav_primary ul>li>a{
      display: inline-block;
-     padding: 15px 60px;
+     padding: 10px 60px 7px 60px;
      color: #fff;
      font-weight: 700;
      transition: all 0.3s;
@@ -383,23 +383,28 @@
      text-transform: uppercase;
      position: relative;
 }
+ .nav_primary ul>li:nth-child(1)>a{
+    padding: 16px 60px 15px 60px;
+ }
+ .nav_primary ul>li>a::before{
+    left: 45px;
+    top:10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 10px 0px 0px;
+    height: 32px;
+ }
  .nav_primary ul>li:nth-child(2)>a::before{
      content:url(../images/www.png);
-     position: absolute;
-     left: 25px;
-     top:10px;
+    
  }
   .nav_primary ul>li:nth-child(3)>a::before{
      content:url(../images/icon_hosting.png);
-     position: absolute;
-     left: 25px;
-     top: 13px;
+
  }
   .nav_primary ul>li:nth-child(4)>a::before{
      content:url(../images/icon_airplane.png);
-     position: absolute;
-     left: 25px;
-     top: 13px;
+  
  }
  .nav_primary ul>li>ul.sub-menu{
      position: absolute;
@@ -473,7 +478,7 @@
 
 
 
- .nav_primary ul li a:hover{
+ .nav_primary ul li:hover{
      color: #fff;
      background: rgba(255, 255, 255, 0.3);
      border-radius: 0px;
@@ -722,9 +727,9 @@ position: relative;
      color: #3faf40 !important;
 }
  h2.post_title a{
-     font-size: 17px;
+     font-size: 15px;
      color: #000;
-     line-height: 25px;
+     line-height: 23px;
      display: inline-block;
      font-weight: 700;
 }
@@ -741,12 +746,41 @@ position: relative;
  .list_post_item{
      clear: both;
      display: table;
-     /* border-bottom: 1px dashed #c3c3c3; */
      padding: 10px 0px 10px 10px;
      width: 100%;
      background: #fff;
-     /* padding: 10px; */
      margin: 0px 0px 30px 0px;
+     position: relative;
+     box-shadow: 2px 2px 10px #a2a2a2;
+}
+.list_post_item .line_vertical{
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    border-left: 2px dashed #d4d4d4;
+    right: 215px;
+    top: 0px;
+}
+.list_post_item .line_vertical::before{
+    /* position: absolute; */
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #efefef;
+    left: -10px;
+    top: -10px;
+    /* box-shadow: 0px 1px 2px #a2a2a2; */
+}
+.list_post_item .line_vertical::after{
+    /* position: absolute; */
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #efefef;
+    left: -10px;
+    bottom: -10px;
 }
 .category  .list_post_item{
  padding: 25px 15px;
@@ -755,6 +789,7 @@ position: relative;
      display: table;
      max-width: 300px;
      float: left;
+     padding: 0px 20px 0px 0px;
 }
  .list_post_item:last-child{
      border-bottom: none;
@@ -781,7 +816,7 @@ position: relative;
          margin: 0px 0px 20px 0px;
 }
  .readmore{
-     padding: 7px 0px;
+     padding: 8px 0px;
      background: #3faf40;
      border-radius: 3px;
      color: #fff;
@@ -795,7 +830,9 @@ position: relative;
      font-size: 16px;
      line-height: 23px;
      clear: both;
-     margin: 0px auto;
+     margin: 0px auto 20px auto;
+     float: right;
+     /* display: table; */
 }
 .readmore::before{
      content:"\f105";
@@ -927,6 +964,7 @@ position: relative;
 }
 /* END BREADCRUMB */
 
+/* ARCHIVE  */
 
  img.size-full{
      max-width: 100%;
@@ -974,6 +1012,33 @@ position: relative;
      display: table;
 }
 
+.status_events{
+    clear: both;
+}
+
+.status_events p{
+    position: relative;
+    padding: 0px 0px 0px 25px;
+    float:left;
+}
+.status_events  span{
+    float:right;
+    position: relative;
+}
+.status_events  span::before{
+    position: absolute;
+    content:"\f06e";
+    font:normal normal normal 14px/1 FontAwesome;
+    left: -19px;
+    top: 1px;
+    color: #797979;
+}
+.status_events p::before{
+    content:url(../images/icon_clock_red.png);
+    position: absolute;
+    left: 0px;
+}
+/* END ARCHIVE  */
 
 /* SINGLE POST */
  .single_post_info{
@@ -1341,11 +1406,13 @@ iframe{
      display: table;
      width: 100%;
      max-width: 230px;
+     padding: 0px 5px 0px 35px;
+     /* border-left: 2px dashed #b5b5b5; */
  }
  .read_more_area .post_meta{
      float:right;
      display: table;
-     margin: 0px 0px 20px 0px;
+     margin: 0px 0px 25px 0px;
  }
 
 /* END CSS KHUYENMAI_TENTEN */ 

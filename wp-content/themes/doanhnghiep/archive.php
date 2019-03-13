@@ -51,7 +51,6 @@ if(have_posts()) :
 							}
 							?>
 						</ul>
-						<div class="row">
 							<ul class="list_post_category">
 								<?php 
 						while(have_posts()): the_post();
@@ -60,7 +59,6 @@ if(have_posts()) :
 						?>
 						</ul>
 						<?php get_template_part('includes/frontend/pagination/pagination'); ?>
-						</div>
 						
 						<?php
 					else:
