@@ -61,45 +61,35 @@
 				</div>
 				<div class="search_address">
 					<div class="search_header">
-					<form  role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
-						<div class="search">
-							<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm">
-							<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
-						</div>
-					</form>
-					
-				</div>
-					<?php if(get_option('address') || get_option('phone')) { ?>
-					<div class="textwidget">
-						<?php if(get_option('address')){ ?>
-							<p><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Địa chỉ : </strong> 
-							<em><?php if(get_locale() == 'en_US'){echo get_option('address_en');} else { echo get_option('address');}  ?> </em></p>
-						<?php }?>
-						<?php if(get_option('phone')){ ?>
-						<p><i class="fa fa-phone" aria-hidden="true"></i><strong>Hotline : </strong>
-							<a href="tel:<?php echo get_option('phone'); ?>"> <?php echo get_option('phone'); ?></a>
-						</p>
-						<?php }?>	
+						<form  role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
+							<div class="search">
+								<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm">
+								<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
 					</div>
-				<?php }?>
+
 				</div>
-				<?php // outputs a flags list (without languages names) ?>
-
+					<div class="phone_hd">
+						<div class="textwidget">
+							<p>(024) 73 020 555</p>
+							<span>Hỗ trợ (24/7)</span>
+						</div>
+					</div>
 			</div>
-		</div>
-		<div class="middle_header sticky">
-			<div class="container">
-				<nav class="nav nav_primary">
-					<?php 
-					$args = array('theme_location' => 'primary');
-					?>
-					<?php wp_nav_menu($args); ?>
+			<div class="middle_header sticky">
+				<div class="container">
+					<nav class="nav nav_primary">
+						<?php 
+						$args = array('theme_location' => 'primary');
+						?>
+						<?php wp_nav_menu($args); ?>
 
-				</nav>
-				
-				
-				
-				
+					</nav>
+
+
+
+
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>

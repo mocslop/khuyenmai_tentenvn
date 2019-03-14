@@ -12,7 +12,7 @@
 		<h2 class="post_title"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	
 		<div class="excerpt">
-			<p><?php echo excerpt(30); ?></p>
+			<p><?php echo excerpt(25); ?></p>
 		</div>
 
 	</div>

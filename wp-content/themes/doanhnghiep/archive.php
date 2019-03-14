@@ -5,9 +5,7 @@ if(have_posts()) :
 	<div id="wrap">
 		<div class="g_content">
 			<div class="container">
-				<div class="row">
-					<div class=" col-sm-9  content_left">
-						<?php 
+					<?php 
 						if(is_category()){
 							//echo '<h3 class="title_archives">' . single_cat_title() . '</h3>';
 							echo '';
@@ -51,14 +49,19 @@ if(have_posts()) :
 							}
 							?>
 						</ul>
+				<div class="row">
+					<div class=" col-sm-9  content_left">
+					
 							<ul class="list_post_category">
 								<?php 
 						while(have_posts()): the_post();
 							get_template_part('includes/frontend/loop/loop_post');
 						endwhile;
+						 get_template_part('includes/frontend/pagination/pagination'); 
 						?>
+
 						</ul>
-						<?php get_template_part('includes/frontend/pagination/pagination'); ?>
+						
 						
 						<?php
 					else:
@@ -66,11 +69,11 @@ if(have_posts()) :
 					wp_reset_postdata();
 					?>
 				</div>
-				<?php  if(have_posts()) : ?>
+
 					<div class=" col-sm-3 sidebar">
 						<?php dynamic_sidebar('sidebar1'); ?> 
 					</div>
-				<?php endif ?>
+			
 				
 			</div>
 		</div>

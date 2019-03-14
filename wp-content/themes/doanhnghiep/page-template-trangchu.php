@@ -10,12 +10,13 @@ get_header();
 			<div class="tg_slide">
 				
 			</div>
+
 			<div class="content_left">
 				<div class="container">
+					<h2 class="title_tg_top">Tin khuyến mãi</h2>
 					<div class="row">
-						<div class="col-sm-9">
-								<h2 class="title_tg_top">Tin khuyến mãi</h2> 
 
+						<div class="col-sm-9">
 								<?php if(have_posts()) { ?>
 									<?php
 									$args = array(
@@ -49,4 +50,5 @@ get_header();
 
 </div>
 </div>
+
 <?php get_footer(); ?>
